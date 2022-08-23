@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
   Future getWeatherByLocation(latitude, longitude) async {
 //http://api.openweathermap.org/data/2.5/weather?lat=28.67&lon=77.22&appid=0fe03700518423ac4a10d937dd52aba5
     String url =
-        'http://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=0fe03700518423ac4a10d937dd52aba5&units=metric';
+        'http://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=672afebd5fd6c2351878292ba024e8bc&units=metric';
     var response = await Dio().get(url);
     var convert =
         jsonDecode(response.toString()); 
@@ -144,7 +144,11 @@ class _HomeState extends State<Home> {
                     const SizedBox(
                       height: 10
                     ),
-                   
+                    // buildWeatherIcon(),
+                  // //  buildRowData(text: text, data: data)
+                  // buildTempField(height),
+                  // buildAppBar(),
+                  // appData()
                   ],
                 ),
               ),
